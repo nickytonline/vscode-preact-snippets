@@ -1,0 +1,21 @@
+{
+  "Installs global prop type checking for app preact components": {
+    "prefix": "ppt",
+    "body": [
+      "",
+      "import preact from 'preact';",
+      "import PropTypes from 'prop-types';",
+      "",
+      "preact.options.vnode = vnode => {",
+      "  let Component = vnode.nodeName;",
+      "  if (Component.propTypes) {",
+      "    PropTypes.checkPropTypes(",
+      "      Component.propTypes,",
+      "      vnode.attributes",
+      "    );",
+      "  }",
+      "}"
+    ],
+    "description": "Installs global prop type checking for app preact components"
+  }
+}
