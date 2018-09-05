@@ -13,6 +13,10 @@
     "email": "nick@iamdeveloper.com",
     "url": "https://iamdeveloper.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickytonline/vscode-preact-snippets"
+  },
   "scripts": {
     "precommit": "lint-staged"
   },
