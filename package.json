@@ -2,7 +2,7 @@
   "name": "vscode-preact-snippets",
   "displayName": "vscode-preact-snippets",
   "description": "Code snippets for Preact",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "keywords": [
     "preact",
     "snippets",
@@ -46,6 +46,10 @@
     "snippets": [
       {
         "language": "javascript",
+        "path": "./snippets/snippets.json"
+      },
+      {
+        "language": "javascriptreact",
         "path": "./snippets/snippets.json"
       }
     ]
