@@ -2,6 +2,8 @@
 
 Code snippets for Preact, inspired by https://twitter.com/garybernhardt/status/1036027076334170112
 
+Thanks to Jason Miller for letting me use the Preact logo. Clipboard in the icon provided by [BomSymbols .](https://www.iconfinder.com/korawan_m).
+
 ## Features
 
 Snippet commands:
