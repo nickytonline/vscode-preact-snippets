@@ -17,5 +17,234 @@
       "}"
     ],
     "description": "Installs global prop type checking for app preact components"
+  },
+  "Preact: import empty":{
+    "prefix": "pi",
+    "body": "import ${1} from '${2}';",
+  },
+    "Preact: import empty named":{
+      "prefix": "pin",
+      "body": "import { ${1} } from '${2}';",
+  },
+  "Preact: import":{
+    "prefix": "pir",
+    "body": "import { h } from 'preact';",
+  },
+  "Preact: Funcional Component":{
+    "prefix": "pfc",
+    "body": "import { h } from 'preact';\n\tconst App = () =>{}\nexport default App",
+  },
+  "Preact: Debug":{
+    "prefix":"pid",
+    "body":"if (process.env.NODE_ENV==='development') { require('preact/debug');}\n",
+  },
+  "Preact: import with Component":{
+    "prefix": "pirc",
+    "body": "import { h ,Component } from 'preact';",
+  },
+  "Preact: import with PureComponent":{
+    "prefix": "pirpc",
+    "body": "import { h ,PureComponent } from 'preact';",
   }
+  "Preact: import with PropTypes":{
+    "prefix": "pirp",
+    "body": "import { h } from 'preact';\nimport PropTypes from 'prop-types';",
+  },
+  "Preact: import PropTypes":{
+    "prefix": "pipt",
+    "body": "import PropTypes from 'prop-types';",
+  },
+  "Preact: import with Component and PropTypes":{
+    "prefix": "pircp",
+    "body": "import { h ,Component } from 'preact';\nimport PropTypes from 'prop-types';",
+  }
+  "Preact: Import with useState":{
+    "prefix": "pirs",
+    "body": "import { h ,useState } from 'preact';",
+  },
+  "Preact: Import with useEffect":{
+    "prefix": "pire",
+    "body": "import { h ,useEffect } from 'preact';"
+  },
+  "Preact: Import with useState and useEffect":{
+    "prefix": "pirse",
+    "body": "import { h } from 'preact';\nimport {,useState, useEffect } from preact/hooks;"
+  },
+  "Preact: export empty()":{
+    "prefix": "pex",
+    "body": "export ${1};"
+  },
+  "Preact: export default empty()":{
+    "prefix": "pexd",
+    "body": "export default ${1};"
+  },
+  "Preact: componentDidMount() { ... }":{
+    "prefix": "pcdm",
+    "body": "componentDidMount() {\n\t${1}\n}${2}"
+},
+  "Preact: componentWillMount() { ... }":{
+    "prefix": "pcwm",
+    "body": "componentWillMount() {\n\t${1}\n}${2}"
+},
+  "Preact: componentWillReceiveProps(np) { ... }":{
+    "prefix": "pcwr",
+    "body": "componentWillReceiveProps(nextProps) {\n\t${1}\n}${2}"
+},
+  "Preact: shouldComponentUpdate(np, ns) { ... }":{
+    "prefix": "pscu",
+    "body": "shouldComponentUpdate(nextProps, nextState) {\n\t${1}\n}${2}"
+},
+  "Preact: componentWillUpdate(np, ns) { ... }":{
+    "prefix": "pcwup",
+    "body": "componentWillUpdate(nextProps, nextState) {\n\t${1}\n}${2}"
+},
+  "Preact: componentDidUpdate(pp, ps) { ... }":{
+    "prefix": "pcdup",
+    "body": "componentDidUpdate(prevProps, prevState) {\n\t${1}\n}${2}"
+},
+  "Preact: componentWillUnmount() { ... }":{
+    "prefix": "pcwun",
+    "body": "componentWillUnmount() {\n\t${1}\n}${2}"
+},
+  "Preact: componentDidCatch(error, info) { ... }":{
+    "prefix": "pcdc",
+    "body": "componentDidCatch(error, info) {\n\t${1}\n}${2}"
+},
+  "Component Funcional With Store":{
+    "prefix": "ppf",
+    "body": "import { h }from 'preact';\nimport createStore from 'unistore'\nimport devtools    from 'unistore/devtools'\n\tlet initialState = { count: 0 };\n\tlet store = process.env.NODEpENV === 'production' ?  createStore(initialState) : devtools(createStore(initialState));\n\tconst $1 = () =>{ \n\t\t<Provider store={initialState}></Provider> }\nexport default $1"
+},
+  "Component Funcional With connect":{
+    "prefix":"ppf",
+    "body": "import { h }from 'preact';\nimport { Provider, connect } from 'unistore/preact'\n\tconst $1 = connect('count', actions)=>{\n\t <Provider store={store}>\n\t  </Provider>\n\t  }export default $1"
+  },
+    "Preact: PropType array":{
+      "prefix": "ppta",
+      "body": "PropTypes.array,"
+    },
+    "Preact: PropType array required":{
+      "prefix": "pptar",
+      "body": "PropTypes.array.isRequired,"
+    },
+    "Preact: PropType bool":{
+      "prefix": "pptb",
+      "body": "PropTypes.bool,"
+},
+    "Preact: PropType bool required":{
+      "prefix": "pptbr",
+      "body": "PropTypes.bool.isRequired,"
+},
+    "Preact: PropType function":{
+      "prefix": "pptf",
+      "body": "PropTypes.func,"
+    },
+
+    "Preact: PropType function required":{
+      "prefix": "pptfr",
+      "body": "PropTypes.func.isRequired,"
+},
+    "Preact: PropType number":{
+      "prefix": "pptn",
+      "body": "PropTypes.number,"
+},
+    "Preact: PropType number required":{
+      "prefix": "pptnr",
+      "body": "PropTypes.number.isRequired,"
+},
+    "Preact: PropType object":{
+      "prefix": "ppto",
+      "body": "PropTypes.object,"
+},
+    "Preact: PropType object required":{
+      "prefix": "pptor",
+      "body": "PropTypes.object.isRequired,"
+},
+    "Preact: PropType string":{
+      "prefix": "ppts",
+      "body": "PropTypes.string,"
+},
+    "Preact: PropType string required":{
+      "prefix": "pptsr",
+      "body": "PropTypes.string.isRequired,"
+},
+    "Preact: PropType node":{
+      "prefix": "pptnd",
+      "body": "PropTypes.node,"
+},
+    "Preact: PropType node required":{
+      "prefix": "pptndr",
+      "body": "PropTypes.node.isRequired,"
+},
+    "Preact: PropType element":{
+      "prefix": "pptel",
+      "body": "PropTypes.element,"
+},
+    "Preact: PropType element required":{
+      "prefix": "pptelr",
+      "body": "PropTypes.element.isRequired,"
+},
+    "Preact: PropType instanceOf":{
+      "prefix": "ppti",
+      "body": "PropTypes.instanceOf(${1}),"
+},
+    "Preact: PropType instanceOf required":{
+      "prefix": "pptir",
+      "body": "PropTypes.instanceOf(${1}).isRequired,"
+},
+    "Preact: PropType oneOf":{
+      "prefix": "ppte",
+      "body": "PropTypes.oneOf([${1}]),"
+},
+    "Preact: PropType oneOf required":{
+      "prefix": "ppter",
+      "body": "PropTypes.oneOf([${1}]).isRequired,"
+},
+    "Preact: PropType oneOfType":{
+      "prefix": "pptet",
+      "body": "PropTypes.oneOfType([${1}]),"
+},
+    "Preact: PropType oneOfType required":{
+      "prefix": "pptetr",
+      "body": "PropTypes.oneOfType([${1}]).isRequired,"
+},
+    "Preact: PropType arrayOf":{
+      "prefix": "pptao",
+      "body": "PropTypes.arrayOf(${1}),"
+},
+    "Preact: PropType arrayOf required":{
+      "prefix": "pptaor",
+      "body": "PropTypes.arrayOf(${1}).isRequired,"
+},
+    "Preact: PropType objectOf":{
+      "prefix": "pptoo",
+      "body": "PropTypes.objectOf(${1}),"
+},
+    "Preact: PropType objectOf required":{
+      "prefix": "pptoor",
+      "body": "PropTypes.objectOf(${1}).isRequired,"
+},
+    "Preact: PropType shape":{
+      "prefix": "pptsh",
+      "body": "PropTypes.shape({${1}}),"
+},
+    "Preact: PropType shape required":{
+      "prefix": "pptshr",
+      "body": "PropTypes.shape({${1}}).isRequired,"
+},
+    "Preact: Styled-Components":{
+      "prefix": "psc",
+      "body":"import styled from 'styled-components';"
+},
+    "Preact: Styled-Components Media Query":{
+      "prefix": "pscm",
+      "body":"import styled from 'styled-components';\nimport media from 'styled-media-query';"
+},
+    "Preact: Styled-Components Basic":{
+      "prefix": "pscb",
+      "body":"import styled from 'styled-components';\nexport const Main = styled.main`\n\t`;"
+},
+    "Preact: Styled-Components Media Query Basic":{
+      "prefix": "pscmb",
+      "body":"import styled from 'styled-components';\nimport media from 'styled-media-query'\n\texport const Main = styled.main`\n\t${media.lessThan('small','medium')\n\t`}`;"
+}
 }
